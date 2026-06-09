@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Voting Results</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f6f8;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      margin: 0;
+    }
+
+    .container {
+      background: white;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+      text-align: center;
+      width: 90%;
+      max-width: 420px;
+    }
+
+    h1 {
+      color: #222;
+      margin-bottom: 30px;
+    }
+
+    .result-box {
+      margin: 15px 0;
+      padding: 18px;
+      border-radius: 8px;
+      background: #eef2ff;
+      font-size: 20px;
+      font-weight: bold;
+      color: #1e3a8a;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-top: 25px;
+      color: #2563eb;
+      text-decoration: none;
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>Voting Results</h1>
+
+    <div class="result-box">
+      Docker: {{ results["Docker"] }} votes
+    </div>
+
+    <div class="result-box">
+      Kubernetes: {{ results["Kubernetes"] }} votes
+    </div>
+
+    <a class="back-link" href="http://localhost:5050">
+      Back to Vote
+    </a>
+  </div>
+</body>
+</html>

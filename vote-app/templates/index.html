@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Voting App</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f6f8;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      margin: 0;
+    }
+
+    .container {
+      background: white;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+      text-align: center;
+      width: 90%;
+      max-width: 420px;
+    }
+
+    h1 {
+      margin-bottom: 10px;
+      color: #222;
+    }
+
+    p {
+      color: #555;
+      margin-bottom: 30px;
+    }
+
+    .vote-btn {
+      display: block;
+      width: 100%;
+      padding: 15px;
+      margin: 12px 0;
+      border: none;
+      border-radius: 8px;
+      background: #2563eb;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .vote-btn:hover {
+      background: #1d4ed8;
+    }
+
+    .results-link {
+      display: inline-block;
+      margin-top: 20px;
+      color: #2563eb;
+      text-decoration: none;
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>Vote Your Choice</h1>
+    <p>Which DevOps tool do you prefer?</p>
+
+    <form action="/vote" method="POST">
+      <button class="vote-btn" type="submit" name="option" value="Docker">
+        Docker
+      </button>
+
+      <button class="vote-btn" type="submit" name="option" value="Kubernetes">
+        Kubernetes
+      </button>
+    </form>
+
+    <a class="results-link" href="http://localhost:5001">
+      View Results
+    </a>
+  </div>
+</body>
+</html>

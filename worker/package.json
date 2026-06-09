@@ -1,0 +1,13 @@
+{
+  "name": "voting-app-worker",
+  "version": "1.0.0",
+  "description": "Node.js worker service for processing votes",
+  "main": "worker.js",
+  "scripts": {
+    "start": "node worker.js"
+  },
+  "dependencies": {
+    "pg": "^8.11.5",
+    "dotenv": "^16.4.5"
+  }
+}
